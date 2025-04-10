@@ -51,7 +51,6 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo do botão de menu */
 .menu-toggle {
   display: none;
   background: none;
@@ -61,10 +60,9 @@ header {
   cursor: pointer;
 }
 
-/* Menu no modo mobile */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block; /* Exibe o botão de menu no mobile */
+    display: block;
     position: relative;
     z-index: 1100;
   }
@@ -72,7 +70,7 @@ header {
   .nav-items {
     position: fixed;
     top: 0;
-    right: -100%; /* Esconde o menu fora da tela */
+    right: -100%;
     height: 100%;
     width: 250px;
     background-color: var(--color-background-light);
@@ -86,7 +84,7 @@ header {
   }
 
   .nav-items.open {
-    right: 0; /* Mostra o menu ao abrir */
+    right: 0;
   }
 
   .nav-items a {
