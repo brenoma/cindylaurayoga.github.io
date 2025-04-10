@@ -1,3 +1,7 @@
+const menuToggle = document.querySelector('.menu-toggle');
+const navItems = document.querySelector('.nav-items');
+const navLinks = document.querySelectorAll('.nav-items a');
+
 document.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelectorAll('a[href^="#"]');
 
@@ -45,4 +49,14 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     preloader.style.display = "none";
   }, 600);
+});
+
+menuToggle.addEventListener('click', () => {
+  navItems.classList.toggle('open');
+});
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navItems.classList.remove('open');
+  });
 });
